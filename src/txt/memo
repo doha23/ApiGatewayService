@@ -1,0 +1,6 @@
+Spring Cloud Gateway - Filter
+rounting 정보 추가
+    - 자바에서 처리
+    - yml or properties에서 처리
+
+Lamda -> 익명 클래스 -> 클래스나 인터페이스를 선언하지 않고 직접 인스턴스를 생성하고 소멸시킬 수 있음
