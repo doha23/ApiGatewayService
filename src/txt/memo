@@ -4,3 +4,6 @@ rounting 정보 추가
     - yml or properties에서 처리
 
 Lamda -> 익명 클래스 -> 클래스나 인터페이스를 선언하지 않고 직접 인스턴스를 생성하고 소멸시킬 수 있음
+
+Netty 내장 서버 : 비동식 방식의 서버
+ - 비동기 방식의 서버를 사용하여 데이터를 사용할 때에는 ServerHttpRequest, ServerHttpResponse라는 객체를 사용
