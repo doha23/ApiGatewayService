@@ -39,3 +39,16 @@ Spring Cloud Gateway - Eureka 연동
 Eureka Server : 서비스를 등록
 Client에서 API Gateway를 이용하여 요청을 하게 되면,
 요청정보가 Eureka Server로 전달되고 어디에 microService가 위치했는지 위치 정보를 전달받고 해당 정보로 포워딩 해줌
+
+
+Spring Cloud Gateway - Load Balancer
+다른 서비스를 2개씩 기동 시키는 법
+1. VM Options -> -Dserver.port=[다른포트]
+터미널에서 기동
+    2. $ mvn spring-boot:run =Dspring-boot.run.jvm.Arguments='-Dserver.port=9003'
+    3. $ mvn clean compile package
+       $ java -jar -Dserver.port=9004 ./target/user-service-0.0.1-SNAPSHOT.jar
+
+랜덤포트 사용법
+1. application.yml 파일의 server.port:0으로 설정
+2. eureka.instance.instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
