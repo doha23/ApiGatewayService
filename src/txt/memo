@@ -34,3 +34,8 @@ Proxied Service : 추가로 구현한 서비스
 OrderedGatewayFilter는 GatewayFilter를 구현시켜주는 자식 클래스
 
 application.yml에 Custom Filter를 등록할 때 추가적인 파라미터가 필요하다면 name:을 붙여주고 이름을 작성해주어야 함.
+
+Spring Cloud Gateway - Eureka 연동
+Eureka Server : 서비스를 등록
+Client에서 API Gateway를 이용하여 요청을 하게 되면,
+요청정보가 Eureka Server로 전달되고 어디에 microService가 위치했는지 위치 정보를 전달받고 해당 정보로 포워딩 해줌
