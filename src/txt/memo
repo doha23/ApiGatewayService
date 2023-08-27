@@ -7,3 +7,16 @@ Lamda -> 익명 클래스 -> 클래스나 인터페이스를 선언하지 않고
 
 Netty 내장 서버 : 비동식 방식의 서버
  - 비동기 방식의 서버를 사용하여 데이터를 사용할 때에는 ServerHttpRequest, ServerHttpResponse라는 객체를 사용
+
+Spring Cloud Gateway - Global Filter
+어떠한 Route 정보라도 공통적으로 실행될 수 있는 필터
+Custom Filter -> 원하는 route에 개별적으로 설정 해줘야 함
+
+boolean 형식의 변수는 isPreLogger 이런 형식으로 getter, setter가 선언됨.
+
+Global Filter는 application.yml의 spring.cloud.gateway.default-filters에 등록함
+이름 , 전달하고자 하는 파라미터를 등록
+
+Global Filter는 모든 필터의 가장 처음에 시작이 되고 가장 마지막에 종료됨.
+
+application.yml은 환경설정 정보 -> microService에 내장되어있음
