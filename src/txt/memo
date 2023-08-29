@@ -52,3 +52,11 @@ Spring Cloud Gateway - Load Balancer
 랜덤포트 사용법
 1. application.yml 파일의 server.port:0으로 설정
 2. eureka.instance.instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+Users Microservice 기능 추가
+- user-service 를 직접 호출 했을 때 -> 페이지 잘 나타남
+- API Gateway로 user-service를 호출했을 떄 -> 404 에러가 뜸
+    -> 1. Users Service의 URI와 API Gateway의 URI가 다름
+    routes에 등록되어있는 uri를 호출하면 http://IPaddress:8000/user-service/health_check의 값이 API Gateway에 갔다가 Micro Service로 감
+    USER SERVICE에는 @GetMapping("/health_check")라고만 되어있어서 못 찾는거임 => @GetMapping("/user-service/health_check")로 변경
+
