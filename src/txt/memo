@@ -60,3 +60,5 @@ Users Microservice 기능 추가
     routes에 등록되어있는 uri를 호출하면 http://IPaddress:8000/user-service/health_check의 값이 API Gateway에 갔다가 Micro Service로 감
     USER SERVICE에는 @GetMapping("/health_check")라고만 되어있어서 못 찾는거임 => @GetMapping("/user-service/health_check")로 변경
 
+암호화 사용
+- '{cipher}8b5116ada2805c9c24df9c632aeba002b98f06caabab9a6eecb0645a2c65085a' 처럼 암호화된 값을 사용하려면 '{cipher}암호화된비밀번호'를 입력해줘야 함.
